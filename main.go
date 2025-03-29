@@ -58,7 +58,7 @@ func getCountrySpeed(country string) float64 {
 	equatorialSpeedKMH := equatorialKM / 24
 	latInRadians := lat * math.Pi / 180
 
-	speed = equatorialSpeedKMH * math.Cos(latInRadians) 
+	speed = math.Abs(equatorialSpeedKMH * math.Cos(latInRadians)) 
 
 	return speed
 }
@@ -71,5 +71,5 @@ func main() {
 	country := os.Args[1]
 	speed := getCountrySpeed(country)
 
-	fmt.Printf("%s's rotational speed: %.2f km/h\n", country, math.Abs(speed))
+	fmt.Printf("%s's rotational speed: %.2f km/h\n", country, speed)
 }
