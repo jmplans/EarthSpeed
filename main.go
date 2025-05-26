@@ -15,7 +15,7 @@ const (
 	a        = 6378.137              // semi-major axis
 	b        = 6356.752              // semi-minor axis
 	e2       = (a*a - b*b) / (a * a) // first eccentricity squared
-	dayHours = 24.0                  // mean solar day
+	dayHours = 23.934444             //24.0                  // mean solar day
 )
 
 type OpenCageResponse struct {
